@@ -26,14 +26,13 @@ export default function App() {
             initialRouteName={'AuthStack'}
             screenOptions={{headerShown: options.headerShown}}>
             <Stack.Screen
-              name="AppStack"
-              component={AppStack}
-              options={options}
-            />
-
-            <Stack.Screen
               name="AuthStack"
               component={AuthStack}
+              options={options}
+            />
+            <Stack.Screen
+              name="AppStack"
+              component={AppStack}
               options={options}
             />
           </Stack.Navigator>
