@@ -5,6 +5,8 @@ import {
 } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {ThemeProvider, theme} from './src/components/theme';
+import AuthStack from './src/stacks/AuthStack';
+import AppStack from './src/stacks/AppStack';
 
 // navigation ref
 export const navigationRef = createNavigationContainerRef();
@@ -23,7 +25,7 @@ export default function App() {
       <ThemeProvider theme={theme}>
         <NavigationContainer ref={navigationRef}>
           <Stack.Navigator
-            initialRouteName={'AuthStack'}
+            initialRouteName={'AppStack'}
             screenOptions={{headerShown: options.headerShown}}>
             <Stack.Screen
               name="AuthStack"
